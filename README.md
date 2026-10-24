@@ -75,8 +75,8 @@ The calibrated Isolation Forest threshold used in the reported evaluation is:
 Clone the repository:
 
 ```bash
-git clone <REPOSITORY_URL>
-cd <REPOSITORY_DIRECTORY>
+git clone https://github.com/samkih1/campus-iot-dns-anomaly-detection.git
+cd campus-iot-dns-anomaly-detection
 ```
 
 Create a virtual environment and install dependencies:
@@ -129,25 +129,40 @@ python3 src/evaluate_hybrid_model.py
 | F1-score | 100.00% | 86.92% | 87.91% |
 | False-positive rate | 0.00% | 11.00% | 11.00% |
 
-Random Forest metrics are based on three-class classification. Isolation Forest and hybrid metrics are based on binary attack detection.
+Random Forest performance is reported using three-class classification, while Isolation Forest and hybrid performance are evaluated using binary attack-detection metrics. These differences should be considered when interpreting the results.
 
+Random Forest achieved 100% accuracy on the simulated independent test dataset. The hybrid framework incorporated an additional Isolation Forest screening stage for observations initially classified as benign, achieving 100% recall on the tested attack observations but introducing an 11% false-positive rate.
+
+The results do not demonstrate an overall improvement over Random Forest on this dataset. Instead, they demonstrate the operation of the sequential hybrid decision logic and highlight the trade-off between anomaly screening and false-positive detection.
 ## Reproducibility Scope
 
-The supplied feature-level datasets support reproduction of the core model training and evaluation results.
+The repository provides sanitised feature-level datasets and Python scripts supporting reproduction of the core Random Forest, Isolation Forest, and sequential hybrid evaluation experiments.
 
-Network simulation, raw dataset construction, feature extraction, and certain supplementary experiments require additional laboratory resources not included in this repository.
+The supplied development dataset contains 4,400 observations, while the independently generated simulated test dataset contains 1,400 observations. These datasets support evaluation of the models using the seven DNS behavioural features implemented in the framework.
+
+The repository also contains supplementary scripts associated with the broader experimental workflow. Reproducing the complete network simulation, packet capture, raw traffic processing, and certain supplementary experiments requires additional laboratory resources and datasets that are not included in this repository.
 
 ## Research Limitations
 
-The results are based on simulated campus DNS traffic and do not establish equivalent performance on operational campus networks.
+The evaluation was conducted using simulated campus DNS traffic. Although the independent test dataset was generated separately from the development dataset, the results do not establish equivalent performance in operational campus networks.
 
-The hybrid framework achieved 100% recall on the tested attack observations but produced an 11% false-positive rate. The Normal traffic scenario accounted for 98 of the 110 false positives.
+The hybrid framework achieved 100% recall on the tested attack observations but produced an 11% false-positive rate. Of the 110 false positives, 98 occurred in the Normal traffic scenario. This indicates a need for further refinement of anomaly screening to reduce incorrect classification of benign DNS behaviour.
 
-Further validation using operational DNS traffic and genuinely unseen attack families is required.
+The `Anomalous_Unknown` output represents observations flagged by Isolation Forest as anomalous after being classified as benign by Random Forest. However, the evaluation did not separately establish detection performance against genuinely unseen attack families.
+
+Further validation using operational DNS traffic, previously unseen attack families, and resource-constrained edge platforms is required to assess the framework's generalisability and deployment feasibility.
 
 ## Research Article
 
-**Design and Implementation of a Lightweight Hybrid Machine Learning Framework for DNS Anomaly Detection in Campus IoT Environments**
+Title: Design and Implementation of a Lightweight Hybrid Machine Learning Framework for DNS Anomaly Detection in Campus IoT Environments
 
-Publication details will be added when available.
+Author: Samwel Kinuthia Kariuki
+
+Affiliation: Zetech University, Kenya
+
+Publication status: Manuscript in preparation.
+
+This repository contains the implementation, sanitised feature-level datasets, and experimental results supporting the research article.
+
+Journal publication details, DOI, and the recommended citation will be added when available.
 
