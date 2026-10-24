@@ -1,0 +1,5 @@
+experiment,features_used,accuracy,macro_precision,macro_recall,macro_f1
+All_7_features,7,1.0,1.0,1.0,1.0
+Without_subdomain_length,6,1.0,1.0,1.0,1.0
+Without_nxdomain_ratio,6,1.0,1.0,1.0,1.0
+Without_both,5,1.0,1.0,1.0,1.0

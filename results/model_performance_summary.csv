@@ -1,0 +1,5 @@
+
+Model,Accuracy,Precision,Recall,F1_Score,FPR,Total_Inference_Time_s,Avg_Time_Per_Record_ms,Throughput_Records_Per_s,Peak_Traced_Python_Memory_MB,CPU_Single_Core_Equivalent_Percent,Peak_Process_RSS_MB,Peak_RSS_Increase_MB,Model_Size
+Random_Forest,1.0000,1.0000,1.0000,1.0000,0.0000,0.130398,0.093141,10736.38,0.211,95.40,150.836,0.375,349KB
+Isolation_Forest_Calibrated,0.9157,0.7809,0.9800,0.8692,0.1100,0.055730,0.039807,25121.26,0.128,104.28,150.797,0.000,3.2MB
+Hybrid_RF_IF,0.9214,0.7843,1.0000,0.8791,0.1100,0.219022,0.156444,6392.05,0.204,95.65,150.914,0.117,3.54MB_combined

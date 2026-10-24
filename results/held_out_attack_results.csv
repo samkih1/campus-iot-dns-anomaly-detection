@@ -1,0 +1,3 @@
+experiment,known_attack,held_out_attack,training_records,benign_training_records,known_attack_training_records,threshold,held_out_test_records,held_out_predicted_known_attack,held_out_anomalous_unknown,held_out_retained_benign,held_out_unknown_detection_rate,held_out_total_flagged_rate,known_attack_correctly_classified,known_attack_test_records,benign_false_positives,benign_test_records
+Hold_out_DNS_Tunnel,NXDOMAIN_Flood,DNS_Tunnel,3900,3400,500,-0.08314865713773613,200,200,0,0,0.0,1.0,200,200,110,1000
+Hold_out_NXDOMAIN_Flood,DNS_Tunnel,NXDOMAIN_Flood,3900,3400,500,-0.08314865713773613,200,19,178,3,0.89,0.985,200,200,110,1000

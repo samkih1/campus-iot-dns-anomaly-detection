@@ -1,0 +1,37 @@
+.env
+.env.*
+*.key
+*.pem
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.pcap
+*.pcapng
+*.vdi
+*.vmdk
+*.ova
+.ipynb_checkpoints/
+
+# Local backup scripts
+src_backup/
+
+# Generated machine-learning models
+models/*.pkl
+
+# Local logs and temporary outputs
+*.log
+*.tmp
+
+# Local backup scripts
+src_backup/
+
+# Generated machine-learning models
+models/*.pkl
+
+# Temporary files
+*.log
+*.tmp
+
+# Local raw Zeek data and intermediate datasets
+raw_data/

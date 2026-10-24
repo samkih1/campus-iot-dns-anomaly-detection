@@ -1,0 +1,8 @@
+feature,importance
+subdomain_length,0.31078551470363613
+query_entropy,0.24679401128681322
+nxdomain_ratio_1s,0.22365060614623775
+queries_last_5s,0.1354479402577352
+inter_query_interval,0.03540041372492262
+repeated_query_ratio_1s,0.02450182225614034
+interval_std_10q,0.02341969162451469
