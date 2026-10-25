@@ -157,12 +157,17 @@ Further validation using operational DNS traffic, previously unseen attack famil
 Title: Design and Implementation of a Lightweight Hybrid Machine Learning Framework for DNS Anomaly Detection in Campus IoT Environments
 
 Author: Samwel Kinuthia Kariuki
-
 Affiliation: Zetech University, Kenya
+Publication Status: Manuscript in preparation.
 
-Publication status: Manuscript in preparation.
+This repository provides the Python implementation, sanitised feature-level datasets, experimental results and reproducibility documentation supporting the research article.
 
-This repository contains the implementation, sanitised feature-level datasets, and experimental results supporting the research article.
+Journal publication details and the recommended article citation will be added when available.
 
-Journal publication details, DOI, and the recommended citation will be added when available.
+## Research Software DOI
 
+The research software accompanying this study has been publicly archived on Zenodo as version 1.0.2, providing a persistent DOI for citation and long-term accessibility.
+
+GitHub Release: v1.0.2
+
+Zenodo Archive: https://doi.org/10.5281/zenodo.23648215
